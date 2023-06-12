@@ -26,3 +26,6 @@
 5. Построить любой график с помощью plotly
 
 ![](https://github.com/MariaShaiina/ds_cours_2023/blob/main/lab3-visual/plotly_Распределение%20доходов%20и%20объема%20затрат.png)
+
+Распределение соотнощения зарплат и затрат между мужчинами и женщинами
+![](https://github.com/MariaShaiina/ds_cours_2023/blob/main/lab3-visual/plotly_Распределение%20соотнощения%20зарплат%20и%20трат%20между%20мужчинами%20и%20женщинами.png)
