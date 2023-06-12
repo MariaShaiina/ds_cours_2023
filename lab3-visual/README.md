@@ -25,4 +25,4 @@
 
 5. Построить любой график с помощью plotly
 
-![](lab3-visual/plotly_Распределение доходов и объема затрат.png)
+![](https://github.com/MariaShaiina/ds_cours_2023/blob/main/lab3-visual/plotly_Распределение%20доходов%20и%20объема%20затрат.png)
