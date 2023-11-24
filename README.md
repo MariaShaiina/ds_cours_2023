@@ -2,8 +2,7 @@
 
 ## Шаина Мария 6231-010402D
 
-- [x] Lab 1. Numpy
-- [x] Lab 2. Pandas 
-- [x] Lab 3. Visual
-- [x] Lab 4. Class
-- [x] Lab 5. Trees
+- [x] Lab 1. Perceptron
+- [] Lab 2. Docker 
+- [] Lab 3. 
+
