@@ -3,6 +3,6 @@
 ## Шаина Мария 6231-010402D
 
 - [x] Lab 1. Perceptron
-- [] Lab 2. Docker 
-- [] Lab 3. 
+- [ ] Lab 2. Docker 
+- [ ] Lab 3. 
 
