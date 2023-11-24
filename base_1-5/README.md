@@ -7,4 +7,3 @@
 - [x] Lab 3. Visual
 - [x] Lab 4. Class
 - [x] Lab 5. Trees
-
