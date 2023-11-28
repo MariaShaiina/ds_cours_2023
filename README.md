@@ -4,5 +4,4 @@
 
 - [x] Lab 1. Perceptron
 - [ ] Lab 2. Docker 
-- [ ] Lab 3. 
 
