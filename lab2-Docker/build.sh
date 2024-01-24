@@ -21,7 +21,7 @@ fi
 # Build the docker image
 docker build --tag $image_tag \
              --build-arg ubuntu_ver=$ubuntu_ver \
-              --build-arg cuda_ver=$cuda_ver \
+             --build-arg cuda_ver=$cuda_ver \
         		 --build-arg cuda_distro=$cuda_distro \
         		 --build-arg cuda_arch=$cuda_arch \
              --build-arg qt_mm_ver=$qt_mm_ver \
