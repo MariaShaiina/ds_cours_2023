@@ -3,7 +3,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2 as cv
-from numpy import ndarray
 
 print( cv.__version__ )
 
