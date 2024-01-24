@@ -32,35 +32,9 @@ def my_hist(img):
     plt.xticks(np.arange(0, 256, 15))
 
 #4. Cделать пороговую обработку методом Otsu (Функция OpenCV)
-# plt.subplots(2, 2, figsize=(26, 10))
-#
-# plt.subplot(2, 2, 1)
-# plt.imshow(gray_scl_img, cmap='gray', vmin=0, vmax=255)
-# plt.title('Input image', fontsize=18)
-#
-# plt.subplot(2, 2, 3)
-#
-# my_hist(gray_scl_img)
-#
-# plt.ylim(0, 0.017)
-# plt.xlabel('Intensity values', fontsize=18)
-# plt.ylabel('Number of pixels', fontsize=18)
-
 trthreshold, bin_img = cv.threshold(gray_scl_img.astype("uint8"), 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 cv.imwrite("/usr/local/Dev/output/" + 'threshold img.jpg',bin_img)
 print("Пороговое значение:", " ", trthreshold)
-
-# plt.subplot(2, 2, 2)
-# plt.imshow(bin_img, cmap='gray', vmin=0, vmax=255)
-# plt.title('Output image', fontsize=18)
-#
-# plt.subplot(2, 2, 4)
-# my_hist(bin_img)
-# plt.ylim(0, 1)
-# plt.xlabel('Pixel intensity values', fontsize=18)
-# plt.ylabel('Number of pixels', fontsize=18)
-#
-# plt.show() #block=False
 
 #5. Определим динамический диапазон входного изображения
 print(f"Минимальное значение яркости: {np.amin(gray_scl_img)} \nМаксимальное значение яркости: {np.amax(gray_scl_img)}")
@@ -81,26 +55,26 @@ lin_contrast_img = preparate(gray_scl_img, lin_contrast)
 cv.imwrite("/usr/local/Dev/output/result img.jpg", lin_contrast_img)
 
 #7. Отображение результатов
-plt.subplots(2,  2, figsize=(24, 8.5))
+# plt.subplots(2,  2, figsize=(24, 8.5))
 
-plt.subplot(2, 2, 1)
-plt.imshow(gray_scl_img, cmap='gray', vmin=0, vmax=255)
-plt.title('Input image', fontsize= 18)
+# plt.subplot(2, 2, 1)
+# plt.imshow(gray_scl_img, cmap='gray', vmin=0, vmax=255)
+# plt.title('Input image', fontsize= 18)
 
-plt.subplot(2, 2, 3)
-my_hist(gray_scl_img)
-plt.ylim (0, 0.017)
-plt.xlabel('Intensity values', fontsize = 18)
-plt.ylabel('Number of pixels', fontsize = 18)
+# plt.subplot(2, 2, 3)
+# my_hist(gray_scl_img)
+# plt.ylim (0, 0.017)
+# plt.xlabel('Intensity values', fontsize = 18)
+# plt.ylabel('Number of pixels', fontsize = 18)
 
-plt.subplot(2, 2, 2)
-plt.imshow(lin_contrast_img, cmap='gray', vmin=0, vmax=255)
-plt.title('Output image', fontsize= 18)
+# plt.subplot(2, 2, 2)
+# plt.imshow(lin_contrast_img, cmap='gray', vmin=0, vmax=255)
+# plt.title('Output image', fontsize= 18)
 
-plt.subplot(2, 2, 4)
-my_hist(lin_contrast_img)
-plt.ylim (0, 0.017)
-plt.xlabel('Intensity values', fontsize = 18)
-plt.ylabel('Number of pixels', fontsize = 18)
+# plt.subplot(2, 2, 4)
+# my_hist(lin_contrast_img)
+# plt.ylim (0, 0.017)
+# plt.xlabel('Intensity values', fontsize = 18)
+# plt.ylabel('Number of pixels', fontsize = 18)
 
-plt.show()
+# plt.show()
