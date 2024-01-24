@@ -9,8 +9,8 @@ print( cv.__version__ )
 
 #1. Считаем цветное rgb изображение
 img = cv.imread("/usr/local/Dev/input/orig_img.jpg")
-plt.imshow(cv.cvtColor(img, cv.COLOR_BGR2RGB))
-plt.show()
+# plt.imshow(cv.cvtColor(img, cv.COLOR_BGR2RGB))
+# plt.show()
 
 #2. Преобразуем изображение в градации серого
 def conversion_to_grayscale(image):
