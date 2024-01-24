@@ -1,11 +1,11 @@
 ARG ubuntu_ver
 FROM ubuntu:$ubuntu_ver
 WORKDIR /
+
 # Update and upgrade
 RUN apt update && apt -y upgrade
 
 # Create dir
-
 RUN mkdir /usr/local/Dev
 
 # Python 3
@@ -59,9 +59,9 @@ RUN unzip opencv_contrib.zip
 
 RUN apt -y install mlocate && updatedb
 
-# COPY build_env.sh /usr/local/Dev
-# RUN chmod +x /usr/local/Dev/build_env.sh
-# RUN cd /usr/local/Dev/ && ./build_env.sh
+COPY build_env.sh /usr/local/Dev
+RUN chmod +x /usr/local/Dev/build_env.sh
+RUN cd /usr/local/Dev/ && ./build_env.sh
 
 RUN export py3_ver_mm_wod=$(python3 -c "import sys; print(\"\".join(map(str, sys.version_info[:2])))")
 RUN export py3_ver_mm=$(python3 -c "import sys; print(\".\".join(map(str, sys.version_info[:2])))")
@@ -85,7 +85,7 @@ ARG build_thread_count
 ARG cmake_command
 
 # RUN apt-cache show cuda
-# RUN . /usr/local/Dev/build_env.sh
+RUN . /usr/local/Dev/build_env.sh
 RUN cmake_command="-D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local/OpenCV-${ocv_ver} \
 -D OPENCV_SKIP_PYTHON_LOADER=OFF \
@@ -120,11 +120,11 @@ RUN make -j${build_thread_count}
 RUN make install
 RUN ldconfig
 
-# RUN . /usr/local/Dev/build_env.sh
-# RUN ln -sf /usr/local/OpenCV-${ocv_ver}/lib/python${py3_ver_mm}/site-packages/cv2/python-${py3_ver_mm}/$(ls /usr/local/OpenCV-${ocv_ver}/lib/python${py3_ver_mm}/site-packages/cv2/python-${py3_ver_mm}/) /usr/local/lib/python${py3_ver_mm}/dist-packages/cv2.so
+RUN . /usr/local/Dev/build_env.sh
+RUN ln -sf /usr/local/OpenCV-${ocv_ver}/lib/python${py3_ver_mm}/site-packages/cv2/python-${py3_ver_mm}/$(ls /usr/local/OpenCV-${ocv_ver}/lib/python${py3_ver_mm}/site-packages/cv2/python-${py3_ver_mm}/) /usr/local/lib/python${py3_ver_mm}/dist-packages/cv2.so
 
-# RUN echo $(python3 -c "import cv2 as cv; print(cv.__version__)")
+RUN echo $(python3 -c "import cv2 as cv; print(cv.__version__)")
 
-# RUN pip3 install 
+RUN pip3 install 
 
 CMD [ "python3","/opt/lab2_task1.py" ]
