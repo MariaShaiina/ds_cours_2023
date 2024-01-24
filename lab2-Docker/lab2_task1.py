@@ -62,10 +62,10 @@ print("Пороговое значение:", " ", trthreshold)
 #
 # plt.show() #block=False
 
-#Определим динамический диапазон входного изображения
+#5. Определим динамический диапазон входного изображения
 print(f"Минимальное значение яркости: {np.amin(gray_scl_img)} \nМаксимальное значение яркости: {np.amax(gray_scl_img)}")
 
-#Линейное контрастирование
+#6. Линейное контрастирование
 a = 255 / (np.amax(gray_scl_img) - np.amin(gray_scl_img))
 b = -1 * a * np.amin(gray_scl_img)
 print("Коэффициенты ЛФ", '  ', a, ' ', b)
@@ -80,7 +80,7 @@ def lin_contrast(x):
 lin_contrast_img = preparate(gray_scl_img, lin_contrast)
 cv.imwrite("/usr/local/Dev/output/result img.jpg", lin_contrast_img)
 
-#Отображение результатов
+#7. Отображение результатов
 plt.subplots(2,  2, figsize=(24, 8.5))
 
 plt.subplot(2, 2, 1)
