@@ -34,7 +34,7 @@ def my_hist(img):
     plt.xticks(np.arange(0, 256, 15))
 
 
-#Определение порогового значения-Т по гистограмме
+#4. Определение порогового значения-Т по гистограмме
 # plt.subplots(2, 4, figsize=(26, 10))
 #
 # plt.subplot(2, 4, 1)
@@ -49,9 +49,9 @@ def my_hist(img):
 # plt.xlabel('Intensity values', fontsize=18)
 # plt.ylabel('Number of pixels', fontsize=18)
 
-# пороговое значение 102
+
 def thresholding(x):
-    return 255 if x < 102 else 0
+    return 255 if x < 102 else 0 #102-T
 
 
 # bin_img = preparate(gray_scl_img, thresholding)
@@ -69,7 +69,7 @@ def thresholding(x):
 #plt.show(block=False)
 
 
-#Определим динамический диапазон входного изображения
+#5. Определим динамический диапазон входного изображения
 print(f"Минимальное значение яркости: {np.amin(gray_scl_img)} \nМаксимальное значение яркости: {np.amax(gray_scl_img)}")
 
 #Линейное контрастирование
@@ -86,7 +86,7 @@ def lin_contrast(x):
     return (int)(rez)
 lin_contrast_img = preparate(gray_scl_img, lin_contrast)
 
-#Отображение результатов
+#6. Отображение результатов
 plt.subplots(2,  2, figsize=(24, 8.5))
 
 plt.subplot(2, 2, 1)
