@@ -8,10 +8,9 @@ from numpy import ndarray
 print( cv.__version__ )
 
 #1. Считаем цветное rgb изображение
-img = cv.imread("/home/masha/TI_labs_2023/lab2_task1/input/orig_img.jpg")
-cv.imshow("Original Image", img)
-cv.waitKey(30000)  # Wait 0,5s
-cv.destroyAllWindows()
+img = cv.imread("/usr/local/Dev/input/orig_img.jpg")
+plt.imshow(cv.cvtColor(img, cv.COLOR_BGR2RGB))
+plt.show()
 
 #2. Преобразуем изображение в градации серого
 def conversion_to_grayscale(image):
@@ -48,7 +47,7 @@ def my_hist(img):
 # plt.ylabel('Number of pixels', fontsize=18)
 
 trthreshold, bin_img = cv.threshold(gray_scl_img.astype("uint8"), 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
-cv.imwrite("/home/masha/TI_labs_2023/lab2_task1/output/" + 'threshold img.jpg',bin_img)
+cv.imwrite("/usr/local/Dev/output/" + 'threshold img.jpg',bin_img)
 print("Пороговое значение:", " ", trthreshold)
 
 # plt.subplot(2, 2, 2)
@@ -79,7 +78,7 @@ def lin_contrast(x):
         return 255
     return (int)(rez)
 lin_contrast_img = preparate(gray_scl_img, lin_contrast)
-cv.imwrite("/home/masha/TI_labs_2023/lab2_task1/output/result img.jpg", lin_contrast_img)
+cv.imwrite("/usr/local/Dev/output/result img.jpg", lin_contrast_img)
 
 #Отображение результатов
 plt.subplots(2,  2, figsize=(24, 8.5))
