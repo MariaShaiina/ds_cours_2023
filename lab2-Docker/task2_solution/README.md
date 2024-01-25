@@ -13,6 +13,10 @@ Compose - это функция, которая принимает список,
 
 Результаты, полученные с помощью модели, представлены на рисунках ниже
 
+<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/6deca0f68d77dc41cde3da1268d72fcc351cf929/lab2-Docker/task2_solution/img/input.jpg">
+
+<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/6deca0f68d77dc41cde3da1268d72fcc351cf929/lab2-Docker/task2_solution/img/cat.jpg">
+
 <img src"https://github.com/MariaShaiina/ds_cours_2023/blob/aadb2f6962777814d2513e6e7ca0ad44fec13f6e/lab2-Docker/task2_solution/output%20road%20img.jpg">
 
 
