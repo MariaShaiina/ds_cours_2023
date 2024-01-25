@@ -1,0 +1,9 @@
+version: '3'
+services:
+  pythotch:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - ./output:/usr/local/Dev/output  # Сохраняем вывод в локальной директории
+    command: python3 lab2_task2.py
