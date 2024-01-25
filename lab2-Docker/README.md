@@ -90,3 +90,7 @@ _________________________
 _________________________
 
 <img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/results_1.png">
+
+
+
+Во второй части был собрать контейнер с установленным PyTorch
