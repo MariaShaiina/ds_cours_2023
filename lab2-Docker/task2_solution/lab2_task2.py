@@ -8,8 +8,7 @@ import torch
 from torchvision import models
 import torchvision.transforms as T
 
-img = Image.open("/content/drive/My Drive/Colab_Notebooks/input.jpg")
-cv.imwrite("/usr/local/Dev/output/" + 'input img.jpg',bin_img)
+img = Image.open("/usr/local/Dev/input/input.jpg")
 
 # Загружаем модель
 fcn = models.segmentation.fcn_resnet101(pretrained=True).eval() #eval - выход
@@ -72,7 +71,7 @@ for i in range(len(out.shape)):
   cv.imwrite("/usr/local/Dev/output/" + 'output road img.jpg', OutRGB_Img)
 
   # Применим эту же функцию к другому изображению, но уже с двумя классами - фон и кошка
-  img2 = Image.open("/content/drive/My Drive/Colab_Notebooks/cat.jpg")
+  img2 = Image.open("/usr/local/Dev/input/cat.jpg")
   input2 = trf(img2).unsqueeze(0)
   out2 = fcn(input2)['out']
   out2 = torch.argmax(out2.squeeze(), dim=0).detach().cpu().numpy()
