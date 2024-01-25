@@ -1,9 +1,11 @@
-version: '3'
+version: '1.0'
+name: pythotch_server
+
 services:
   pythotch:
-    build:
-      context: .
     restart: unless-stopped
-    volumes:
+    image: pythotch/pythotch
+    volumes: 
+      - ./:/usr/app/src
       - ./output:/usr/local/Dev/output  # Сохраняем вывод в локальной директории
-    command: python3 lab2_task2.py
+    command: python3 /usr/local/Dev/lab2_task2.py
