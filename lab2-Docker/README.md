@@ -75,17 +75,17 @@ _________________________
 _________________________
 Рисунок 2 - Исходное изображение
 
-<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/orig_img.jpg" width="814" height="394">
+<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/orig_img.jpg">
 
 _________________________
 Рисунок 3 - Пороговая обработка
 
-<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/threshold%20img.jpg" width="814" height="394">
+<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/threshold%20img.jpg">
 
 _________________________
 Рисунок 4 - Результат обработки
 
-<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/result%20img.jpg" width="814" height="394">
+<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/9a4bebb15bbeaa559b363ffcca51c2b92f5946a2/lab2-Docker/img/result%20img.jpg">
 
 _________________________
 
