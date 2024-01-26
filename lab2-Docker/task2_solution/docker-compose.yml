@@ -5,4 +5,5 @@ services:
     image: my_custom_pytorch 
     volumes:
       - /home/masha/Compose_:/usr/local/Dev
+      - /home/masha/Compose_/output:/usr/local/Dev/output # Сохраняем результаты на хост 
     command: python3 /usr/local/Dev/lab2_task2.py
