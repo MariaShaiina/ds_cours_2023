@@ -22,7 +22,7 @@ trf = T.Compose([
     T.Normalize(mean=mean, std=std)]
 )
 
-input = trf(img).unsqueeze(0) # unsqueeze() c флагом 0 приводит изображение вида (3, 224, 224) к виду (1, 3, 224, 224))
+input = trf(img).unsqueeze(0) # unsqueeze() c флагом 0 приводит изображение вида (3, 224, 224) к виду (1, 3, 224, 224)
 
 # Прямой проход через сеть
 out =fcn(input)['out']
