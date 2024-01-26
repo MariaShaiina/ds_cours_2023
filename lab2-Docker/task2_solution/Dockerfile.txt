@@ -1,9 +1,6 @@
 # Используем базовый образ PyTorch
 FROM pytorch/pytorch:latest
 
-# Создаем рабочую директорию
-RUN mkdir /usr/local/Dev
-
 # Устанавливаем зависимости
 RUN apt-get update && apt-get install -y \
     ffmpeg \
