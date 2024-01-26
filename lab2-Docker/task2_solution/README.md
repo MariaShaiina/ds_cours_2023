@@ -25,7 +25,7 @@ docker-compose up
 
 Как мы видим, после запуска в локальном директории появилась папка output
 
-<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/44859c34fdab226b72cc4baeec825618fec71849/lab2-Docker/task2_solution/result.jpg" waight="22" hight="14">
+<img src="https://github.com/MariaShaiina/ds_cours_2023/blob/44859c34fdab226b72cc4baeec825618fec71849/lab2-Docker/task2_solution/result.jpg" width="644" height="274">
 
 Результаты, полученные с помощью модели, представлены на рисунках ниже
 
