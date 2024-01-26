@@ -1,11 +1,8 @@
-version: '1.0'
-name: pythotch_server
-
+version: '3.9'
 services:
-  pythotch:
+   pythotch:
     restart: unless-stopped
-    image: pythotch/pythotch
-    volumes: 
-      - ./:/usr/app/src
-      - ./output:/usr/local/Dev/output  # Сохраняем вывод в локальной директории
+    image: my_custom_pytorch 
+    volumes:
+      - /home/masha/Compose_:/usr/local/Dev
     command: python3 /usr/local/Dev/lab2_task2.py
